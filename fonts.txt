@@ -1,0 +1,12 @@
+naglowki:
+https://fonts.google.com/specimen/Chakra+Petch?preview.text=DOBRY%20MIODEK&preview.size=60&preview.text_type=custom&subset=latin-ext
+https://fonts.google.com/specimen/Tektur?preview.text=DOBRY%20MIODEK&preview.size=60&preview.text_type=custom&subset=latin-ext
+
+glowny hero tytul:
+https://fonts.google.com/specimen/Tektur?preview.text=DOBRY%20MIODEK&preview.size=60&preview.text_type=custom&subset=latin-ext
+https://fonts.google.com/specimen/Oooh+Baby?preview.text=PASIEKA%20DOBRY%20MIODEK&preview.size=60&preview.text_type=custom&subset=latin-ext
+https://fonts.google.com/specimen/Stick?preview.text=PASIEKA%20DOBRY%20MIODEK&preview.size=60&preview.text_type=custom&subset=latin-ext
+https://fonts.google.com/specimen/ADLaM+Display?preview.text=DOBRY%20MIODEK&preview.size=60&preview.text_type=custom&subset=latin-ext
+
+tekst:
+https://fonts.google.com/specimen/Open+Sans

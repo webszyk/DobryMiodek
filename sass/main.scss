@@ -1,0 +1,74 @@
+@use "./colors" as *;
+@use "./components" as *;
+@use "./mixins" as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  // font-size: 62.5%; - to samo co 10px, bo 62.5% z 16 px to 10px
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  // font-family: "Nosifer", cursive;
+  // font-family: "Tektur", cursive;
+}
+
+// nav
+.burger-btn {
+  position: fixed; //bo ma byc zawsze przyklejony jak jest scrolowany
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+
+  &:focus {
+    outline: none;
+    background-origin: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+  }
+
+  &:hover {
+    .burger-btn__bars::after,
+    .burger-btn__bars::before {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    position: relative;
+    width: 40px;
+    height: 30px;
+  }
+
+  &__bars,
+  &__bars::after,
+  &__bars::before {
+    @include burgerBtn;
+  }
+  &__bars {
+    width: 100%;
+
+    &::after {
+      top: 13px;
+      width: 60%;
+    }
+
+    &::before {
+      top: 27px;
+      width: 30%;
+      transition-delay: 0.1s;
+    }
+  }
+}
