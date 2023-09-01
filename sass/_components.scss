@@ -1,3 +1,5 @@
+@use "colors" as *;
+
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -5,7 +7,6 @@
 }
 //po to zeby tekst byl wysrodkowany i dostosowany do roznych ekranow. tresc w centralnym pkt
 
-$pure-white: #fff;
 .white-block {
   position: absolute;
   height: 40px;
@@ -13,15 +14,15 @@ $pure-white: #fff;
   background-color: $pure-white;
 
   &-left {
-    bottom: 0;
+    bottom: -1px;
     left: -50px;
-    transform: skew(45deg);
+    transform: skew(55deg);
   }
 
   &-right {
     top: 0;
     right: -50px;
-    transform: skew(45deg);
+    transform: skew(55deg);
   }
 }
 .btn-special-animation {
@@ -32,7 +33,7 @@ $pure-white: #fff;
 
   &::before {
     display: block;
-    position: relative;
+    position: absolute;
     content: "";
     top: 0;
     left: 0;

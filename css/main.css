@@ -11,14 +11,14 @@
   background-color: #fff;
 }
 .white-block-left {
-  bottom: 0;
+  bottom: -1px;
   left: -50px;
-  transform: skew(45deg);
+  transform: skew(55deg);
 }
 .white-block-right {
   top: 0;
   right: -50px;
-  transform: skew(45deg);
+  transform: skew(55deg);
 }
 
 .btn-special-animation {
@@ -29,7 +29,7 @@
 }
 .btn-special-animation::before {
   display: block;
-  position: relative;
+  position: absolute;
   content: "";
   top: 0;
   left: 0;
@@ -60,12 +60,53 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  background-image: linear-gradient(45deg, rgb(209, 69, 69), rgb(255, 208, 69));
+  z-index: 100;
+}
+.nav--active {
+  transform: translateX(0);
+}
+.nav__item {
+  position: relative;
+  margin: 0.5em 0;
+  text-decoration: none;
+  font-size: 3.4rem;
+  padding: 0.5em 2em;
+  display: block;
+  color: #fff;
+}
+.nav__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  transform: scaleY(0);
+  background-color: #fff;
+  transition: transform 0.6s;
+  content: "";
+}
+.nav__item:hover::before {
+  transform: scaleY(1);
 }
 
 .burger-btn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 18px;
+  right: 18px;
   padding: 1em;
   background: none;
   border: 1px solid transparent;
@@ -74,7 +115,7 @@ body {
 }
 .burger-btn:focus {
   outline: none;
-  background-origin: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 12px;
 }
 .burger-btn:hover .burger-btn__bars::after,
@@ -105,4 +146,73 @@ body {
   top: 27px;
   width: 30%;
   transition-delay: 0.1s;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 85vh;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/header-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-attachment: scroll;
+}
+.header span {
+  font-weight: 700;
+}
+.header__heading {
+  font-family: "Tektur", cursive;
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+.header__text {
+  font-size: 1.4rem;
+}
+.header__btn {
+  background: #fff;
+  margin-top: 2em;
+  padding: 0.8em 1.6em;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.header__btn::before {
+  background-color: #eee;
+}
+
+@media (min-width: 768px) {
+  .white-block {
+    height: 45px;
+    width: 48%;
+  }
+  .header__heading {
+    font-size: 6.6rem;
+  }
+  .header__text {
+    font-size: 2.2rem;
+  }
+  .header__btn {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 992px) {
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+  .header {
+    background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/header-big.jpg");
+  }
+  .header__heading {
+    font-size: 10rem;
+  }
 }/*# sourceMappingURL=main.css.map */
