@@ -26,6 +26,7 @@
   transition: background-color 0.3s;
   overflow: hidden;
   z-index: 0;
+  transition: 0.5s;
 }
 .btn-special-animation::before {
   display: block;
@@ -45,6 +46,37 @@
   transform-origin: left;
 }
 
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f8a52b;
+  letter-spacing: 2px;
+}
+
+.section-padding {
+  padding: 6em 2em;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 3rem;
+  }
+  .section-padding {
+    padding: 8em 2em;
+  }
+}
+@media (min-width: 992px) {
+  .section-heading {
+    font-size: 4.8rem;
+  }
+  .section-padding {
+    padding: 10em 2em;
+  }
+}
 *,
 *::after,
 *::before {
@@ -72,7 +104,7 @@ body {
   height: 100vh;
   width: 100%;
   transform: translateX(100%);
-  transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: 0.5s;
   background-image: linear-gradient(45deg, rgb(209, 69, 69), rgb(255, 208, 69));
   z-index: 100;
 }
@@ -91,16 +123,12 @@ body {
 .nav__item::before {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  transform: scaleY(0);
-  background-color: #fff;
+  left: -10px;
   transition: transform 0.6s;
   content: "";
 }
 .nav__item:hover::before {
-  transform: scaleY(1);
+  content: url(../img/bee-white.png);
 }
 
 .burger-btn {
@@ -148,6 +176,18 @@ body {
   transition-delay: 0.1s;
 }
 
+@keyframes navItemsAnimation {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-items-animation {
+  animation: navItemsAnimation 1s both;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -155,7 +195,7 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 2em;
-  height: 85vh;
+  height: 75vh;
   text-align: center;
   color: #fff;
   background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/header-small.jpg");
@@ -189,6 +229,44 @@ body {
   background-color: #eee;
 }
 
+.aboutus__box {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+.aboutus__img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.aboutus__title {
+  margin-bottom: 0.5em;
+}
+.aboutus__text {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 576px) {
+  .aboutus__box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .aboutus__box-text {
+    width: 55%;
+  }
+  .aboutus__box-text--right {
+    text-align: right;
+  }
+  .aboutus__box-img {
+    width: 40%;
+  }
+  .aboutus__box-img--right {
+    order: 1;
+  }
+  .aboutus__img {
+    margin-bottom: 0;
+    max-height: 300px;
+  }
+}
 @media (min-width: 768px) {
   .white-block {
     height: 45px;
@@ -203,6 +281,9 @@ body {
   .header__btn {
     font-size: 1.8rem;
   }
+  .aboutus__text {
+    font-size: 1.8rem;
+  }
 }
 @media (min-width: 992px) {
   .burger-btn {
@@ -214,5 +295,21 @@ body {
   }
   .header__heading {
     font-size: 10rem;
+  }
+  .nav__item {
+    font-size: 6rem;
+  }
+  .nav__item::before {
+    top: 30px;
+    left: 20px;
+  }
+  .aboutus__box {
+    margin: 5em 0;
+  }
+  .aboutus__title {
+    font-size: 3rem;
+  }
+  .aboutus__text {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
