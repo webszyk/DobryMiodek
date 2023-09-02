@@ -195,6 +195,30 @@ body {
   }
 }
 
+//hero img
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 10em -2em;
+  @include heroImgages("../img/miod-rzepakowy-small.jpg");
+  text-align: center;
+  color: $pure-white;
+  height: 80vh;
+  overflow: hidden;
+
+  &__title {
+    font-family: "Tektur", cursive;
+    font-size: 7rem;
+  }
+  &__text {
+    padding: 1em 0;
+    font-size: 2rem;
+  }
+}
+
 // ---------------------
 // MEDIA
 // ---------------------
@@ -254,6 +278,15 @@ body {
       font-size: 1.8rem;
     }
   }
+  .hero-img {
+    padding: 30rem 2em;
+    &__title {
+      font-size: 5rem;
+    }
+    &__text {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -290,6 +323,19 @@ body {
 
     &__text {
       font-size: 2rem;
+    }
+  }
+
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: $orange-gradient, url("../img/miod-rzepakowy.jpg");
+
+    &__title {
+      font-size: 12rem;
+    }
+
+    &__text {
+      font-size: 5rem;
     }
   }
 }
