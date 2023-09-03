@@ -144,7 +144,6 @@ body {
 .burger-btn:focus {
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
 }
 .burger-btn:hover .burger-btn__bars::after,
 .burger-btn:hover .burger-btn__bars::before {
@@ -220,7 +219,6 @@ body {
   margin-top: 2em;
   padding: 0.8em 1.6em;
   border: none;
-  border-radius: 8px;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -290,7 +288,6 @@ body {
 .faq__card-img {
   padding: 2em;
   height: 100%;
-  border-radius: 8px;
   background-size: cover;
   transition: transform 1s, opacity 1s;
 }
@@ -329,7 +326,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 8px;
   background-image: linear-gradient(316deg, rgba(255, 225, 144, 0.7490196078) 0%, rgba(250, 158, 140, 0.75) 74%);
   opacity: 0;
   transform: rotateY(180deg);
@@ -367,7 +363,6 @@ body {
   transform: translateX(-50%);
   bottom: 2em;
   padding: 1em;
-  border-radius: 8px;
   width: 80%;
   border: none;
   background-color: #90AEFF;
