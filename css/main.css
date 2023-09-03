@@ -263,11 +263,118 @@ body {
 }
 .hero-img__title {
   font-family: "Tektur", cursive;
-  font-size: 7rem;
+  font-size: 4rem;
+  padding: 0.5em 0.2em;
 }
 .hero-img__text {
-  padding: 1em 0;
+  padding: 0.5em 1em;
   font-size: 2rem;
+}
+
+.faq__card {
+  position: relative;
+  margin: 1em 0;
+  height: 480px;
+  color: #fff;
+  text-align: center;
+  perspective: 1000px;
+}
+.faq__card:hover .faq__card-img {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+.faq__card:hover .faq__card-info {
+  transform: rotateY(0);
+  opacity: 1;
+}
+.faq__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  transition: transform 1s, opacity 1s;
+}
+.faq__card-img--first {
+  background-image: linear-gradient(316deg, rgba(255, 225, 144, 0.7490196078) 0%, rgba(250, 158, 140, 0.75) 74%), url("../img/sloik-miodu.jpg");
+}
+.faq__card-img--second {
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/rozlewanie-miodu.jpg");
+}
+.faq__card-img--third {
+  background-image: linear-gradient(315deg, rgba(251, 176, 52, 0.75) 0%, rgba(255, 221, 0, 0.75) 74%), url("../img/pszczoly.jpg");
+}
+.faq__card-img-title {
+  position: absolute;
+  top: 1.5em;
+  left: 2em;
+  font-family: "Tektur", cursive;
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+}
+.faq__card-img-info {
+  position: absolute;
+  bottom: 1.5em;
+  right: 2em;
+  font-size: 2.2rem;
+}
+.faq__card-img-info i {
+  margin-right: 0.3em;
+}
+.faq__card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  background-image: linear-gradient(316deg, rgba(255, 225, 144, 0.7490196078) 0%, rgba(250, 158, 140, 0.75) 74%);
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 1s opacity 1s;
+}
+.faq__card-info-title {
+  position: absolute;
+  left: 2em;
+  top: 1.5em;
+  font-family: "Tektur", cursive;
+  letter-spacing: 0.2em;
+  font-size: 3rem;
+}
+.faq__card-info-text {
+  padding: 2em;
+}
+.faq__card-info-list {
+  margin: 0 auto;
+  width: 70%;
+  list-style: none;
+}
+.faq__card-info-list-item {
+  padding: 1em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+  width: 50%;
+  margin: 0 auto;
+}
+.faq__card-info-list-item:last-child {
+  border-bottom: none;
+}
+.faq__card-info-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 8px;
+  width: 80%;
+  border: none;
+  background-color: #90AEFF;
+  cursor: pointer;
+}
+.faq__card-info-btn::before {
+  background-color: #0a5dda;
 }
 
 @media (min-width: 576px) {
@@ -291,6 +398,18 @@ body {
     margin-bottom: 0;
     max-height: 300px;
   }
+  .hero-img {
+    padding: 30rem 2em;
+  }
+  .hero-img__title {
+    font-family: "Tektur", cursive;
+    font-size: 6rem;
+  }
+  .hero-img__text {
+    font-size: 2.8rem;
+    padding: 0 1em;
+    width: 90%;
+  }
 }
 @media (min-width: 768px) {
   .white-block {
@@ -313,10 +432,12 @@ body {
     padding: 30rem 2em;
   }
   .hero-img__title {
-    font-size: 5rem;
+    font-family: "Tektur", cursive;
+    font-size: 9rem;
   }
   .hero-img__text {
-    font-size: 2.2rem;
+    font-size: 3.3rem;
+    padding: 0 1em;
   }
 }
 @media (min-width: 992px) {
@@ -351,9 +472,10 @@ body {
     background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/miod-rzepakowy.jpg");
   }
   .hero-img__title {
-    font-size: 12rem;
+    font-size: 11rem;
   }
   .hero-img__text {
-    font-size: 5rem;
+    font-size: 4rem;
+    width: 80%;
   }
 }/*# sourceMappingURL=main.css.map */
