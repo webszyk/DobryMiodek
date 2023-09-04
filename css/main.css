@@ -93,6 +93,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
+  color: #2e2e2e;
 }
 
 .nav {
@@ -105,7 +106,7 @@ body {
   width: 100%;
   transform: translateX(100%);
   transition: 0.5s;
-  background-image: linear-gradient(45deg, rgb(209, 69, 69), rgb(255, 208, 69));
+  background-image: linear-gradient(45deg, rgba(209, 69, 69, 0.75), rgba(255, 208, 69, 0.75));
   z-index: 100;
 }
 .nav--active {
@@ -256,7 +257,7 @@ body {
   background-attachment: fixed;
   text-align: center;
   color: #fff;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
 }
 .hero-img__title {
@@ -272,7 +273,7 @@ body {
 .faq__card {
   position: relative;
   margin: 1em 0;
-  height: 480px;
+  height: 600px;
   color: #fff;
   text-align: center;
   perspective: 1000px;
@@ -289,10 +290,10 @@ body {
   padding: 2em;
   height: 100%;
   background-size: cover;
-  transition: transform 1s, opacity 1s;
+  transition: transform 1.5s, opacity 1.5s;
 }
 .faq__card-img--first {
-  background-image: linear-gradient(316deg, rgba(255, 225, 144, 0.7490196078) 0%, rgba(250, 158, 140, 0.75) 74%), url("../img/sloik-miodu.jpg");
+  background-image: radial-gradient(circle at top right, rgba(120, 140, 182, 0.75) 0%, rgba(253, 184, 19, 0.75) 100%), url("../img/sloik-miodu.jpg");
 }
 .faq__card-img--second {
   background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/rozlewanie-miodu.jpg");
@@ -303,16 +304,16 @@ body {
 .faq__card-img-title {
   position: absolute;
   top: 1.5em;
-  left: 2em;
+  left: 1.3em;
   font-family: "Tektur", cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 0.2em;
 }
 .faq__card-img-info {
   position: absolute;
   bottom: 1.5em;
-  right: 2em;
-  font-size: 2.2rem;
+  right: 1.2em;
+  font-size: 2rem;
 }
 .faq__card-img-info i {
   margin-right: 0.3em;
@@ -326,50 +327,74 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(316deg, rgba(255, 225, 144, 0.7490196078) 0%, rgba(250, 158, 140, 0.75) 74%);
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%);
   opacity: 0;
   transform: rotateY(180deg);
-  transition: transform 1s opacity 1s;
+  transition: transform 1.5s opacity 1.5s;
 }
 .faq__card-info-title {
   position: absolute;
-  left: 2em;
+  left: 1.3em;
   top: 1.5em;
   font-family: "Tektur", cursive;
   letter-spacing: 0.2em;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .faq__card-info-text {
-  padding: 2em;
+  padding: 1em;
 }
 .faq__card-info-list {
   margin: 0 auto;
-  width: 70%;
   list-style: none;
 }
 .faq__card-info-list-item {
   padding: 1em;
   font-size: 1.4rem;
   border-bottom: 1px solid #eee;
-  width: 50%;
   margin: 0 auto;
+}
+.faq__card-info-list-item a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.faq__card-info-list-item a:hover {
+  color: #2e2e2e;
 }
 .faq__card-info-list-item:last-child {
   border-bottom: none;
 }
-.faq__card-info-btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 2em;
-  padding: 1em;
-  width: 80%;
-  border: none;
-  background-color: #90AEFF;
-  cursor: pointer;
+
+.offers {
+  position: relative;
+  overflow: hidden;
 }
-.faq__card-info-btn::before {
-  background-color: #0a5dda;
+.offers__option {
+  margin: 1em 0;
+  box-shadow: 2px 2px 20px #eee;
+  background-color: #fff;
+  overflow: hidden;
+}
+.offers__option-img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+.offers__option-img:hover {
+  transform: scale(1.05);
+}
+.offers__option-info {
+  padding: 2em;
+  background-color: #fff;
+  z-index: 10;
+}
+.offers__option-heading {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.offers__option-text {
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
 }
 
 @media (min-width: 576px) {
@@ -405,6 +430,46 @@ body {
     padding: 0 1em;
     width: 90%;
   }
+  .faq__card-img-title {
+    font-size: 3rem;
+  }
+  .faq__card-img-info {
+    font-size: 2.5rem;
+  }
+  .faq__card-info-title {
+    font-size: 3rem;
+  }
+  .faq__card-info-text {
+    font-size: 2rem;
+  }
+  .faq__card-info-list {
+    font-size: 2rem;
+    width: 90%;
+    margin-top: 2em;
+  }
+  .faq__card-info-list-item {
+    font-size: 1.8rem;
+  }
+  .offers__option {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-img {
+    width: 50%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .offers__option-img--right {
+    order: 1;
+  }
+  .offers__option-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+  }
 }
 @media (min-width: 768px) {
   .white-block {
@@ -434,6 +499,27 @@ body {
     font-size: 3.3rem;
     padding: 0 1em;
   }
+  .faq__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .faq__card {
+    margin: 1em;
+    width: 45%;
+  }
+  .faq__card-img-title {
+    font-size: 2.8rem;
+  }
+  .faq__card-info-title {
+    font-size: 2.8rem;
+  }
+  .offers__option-heading {
+    font-size: 3.2rem;
+  }
+  .offers__option-text {
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 992px) {
   .burger-btn {
@@ -460,7 +546,7 @@ body {
     font-size: 3rem;
   }
   .aboutus__text {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .hero-img {
     padding: 40rem 2em;
@@ -472,5 +558,20 @@ body {
   .hero-img__text {
     font-size: 4rem;
     width: 80%;
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .section-padding {
+    padding: 4em;
+  }
+}
+@media (min-width: 1100px) {
+  .faq__card {
+    width: 30%;
+  }
+  .faq__card-img {
+    background-position: center;
   }
 }/*# sourceMappingURL=main.css.map */

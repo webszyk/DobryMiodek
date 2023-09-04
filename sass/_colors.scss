@@ -39,7 +39,7 @@ $secondary-color: #d98f19;
 $pure-white: #fff;
 $light-white: #eee;
 $dark: #2e2e2e;
-$blue-color: #90AEFF;
+$dark-color: #0b0b0c;
 $blue-color-hover: #0a5dda;
 
 $light-orange-gradient: linear-gradient(
@@ -59,13 +59,13 @@ $yellow-gradient: linear-gradient(
 );
 $orange-gradient-solid: linear-gradient(
   45deg,
-  rgb(209, 69, 69),
-  rgb(255, 208, 69)
+  rgba(209, 69, 69, 0.75),
+  rgba(255, 208, 69, 0.75)
 );
 $light-blue-gradient-solid: radial-gradient(
   circle at top right,
-  rgb(120, 140, 182) 0%,
-  rgb(253, 184, 19) 100%
+  rgba(120, 140, 182, 0.75) 0%,
+  rgba(253, 184, 19, 0.75) 100%
 );
 
 // https://paletton.com/#uid=30L0u0kqsv7gqGSlAzbuKqLxfl3
