@@ -8,10 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nosifer&family=Open+Sans:wght@400;700&family=Tektur&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Rammetto+One&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
 
     <script
@@ -209,8 +213,8 @@
       </section>
 
       <section class="offers section-padding section">
-        <div class="white-block white-block-right"></div>
-        <div class="white-block white-block-left"></div>
+        <!-- <div class="white-block white-block-right"></div>
+        <div class="white-block white-block-left"></div> -->
         <h2 class="section-heading">Wybierz miód dla siebie</h2>
         <div class="wrapper">
           <div class="offers__box">
@@ -320,13 +324,208 @@
         class="reviews section section-padding white-section"
         id="opinie"
       >
+        <div class="white-block white-block-left"></div>
+        <div class="white-block white-block-right"></div>
         <h2 class="section-heading">Opinie</h2>
         <div class="wrapper">
-          <div class="reviews__boxes"></div>
+          <div class="reviews__boxes">
+            <div class="reviews__box">
+              <div class="reviews__box-img">
+                <img src="img/user.png" alt="Użytkownik avatar" />
+              </div>
+
+              <div class="reviews__box-info">
+                <div class="reviews__box-quote">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <p class="reviews__box-text">
+                  Smaczny miód. Miód kremowany rzepakowy b. dobry i odpowiedni
+                  jako np. dodatek do kawy, herbaty itd. Polecam!
+                </p>
+                <strong>Teresa</strong>
+              </div>
+              <div class="reviews__box-google">
+                <img src="img/g-icon.png" alt="Użytkownik avatar" />
+              </div>
+            </div>
+
+            <div class="reviews__box">
+              <div class="reviews__box-img">
+                <img src="img/user.png" alt="Użytkownik avatar" />
+              </div>
+              <div class="reviews__box-info">
+                <div class="reviews__box-quote">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <p class="reviews__box-text">
+                  Pasieka prowadzona z ogromną pasją, przesympatyczni
+                  właściciele i najlepszy miód jaki jadłam, z całego serca
+                  polecam!
+                </p>
+                <strong>Alicja</strong>
+              </div>
+              <div class="reviews__box-google">
+                <img src="img/g-icon.png" alt="Użytkownik avatar" />
+              </div>
+            </div>
+
+            <div class="reviews__box">
+              <div class="reviews__box-img">
+                <img src="img/user.png" alt="Użytkownik avatar" />
+              </div>
+              <div class="reviews__box-info">
+                <div class="reviews__box-quote">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <p class="reviews__box-text">
+                  Moja żona kupiła ten miód z zeszłorocznego wyjazdu do Polski i
+                  za każdym razem, gdy tam jest, przywozi kilka butelek.
+                  Najlepszy miód, jaki próbowaliśmy, a personel jest bardzo
+                  przyjazny, kontynuujcie dobrą robotę.
+                </p>
+                <strong>Steven</strong>
+              </div>
+              <div class="reviews__box-google">
+                <img src="img/g-icon.png" alt="Użytkownik avatar" />
+              </div>
+            </div>
+
+            <div class="reviews__box">
+              <div class="reviews__box-img">
+                <img src="img/user.png" alt="Użytkownik avatar" />
+              </div>
+              <div class="reviews__box-info">
+                <div class="reviews__box-quote">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <p class="reviews__box-text">Bardzo dobry miód 👍👍👍</p>
+                <strong>Eva</strong>
+              </div>
+              <div class="reviews__box-google">
+                <img src="img/g-icon.png" alt="Użytkownik avatar" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact section-padding section white-section"
+        id="kontakt"
+      >
+        <div class="white-block white-block-left"></div>
+        <h2 class="section-heading">Kontakt</h2>
+        <div class="wrapper">
+          <p class="section-padding">
+            Jeśli chcesz wiedzieć więcej na tem Pasieki – Dobry Miodek i masz
+            pytania odnośnie miodu lub porozmawiać na temat współpracy – wybierz
+            dowolny sposób kontaktu i odezwij się do nas. 🙂 Odpowiemy w ciągy
+            12h. Kontakt telefoniczny w godzinach 08:30 – 20:00.
+          </p>
+          <form action="" class="contact__form">
+            <div class="contact__form-top">
+              <label for="name" class="contact__form-label"
+                >Imię i nazwisko</label
+              >
+              <input type="text" id="name" class="contact__form-input" />
+
+              <label for="email" class="contact__form-label">Adres email</label>
+              <input type="text" id="email" class="contact__form-input" />
+            </div>
+
+            <label for="msg" class="contact__form-label">Wiadomość</label>
+            <textarea
+              id="msg"
+              cols="30"
+              rows="10"
+              class="contact__form-textarea"
+              placeholder="Napisz swoją wiadomość..."
+            ></textarea>
+
+            <button
+              type="submit"
+              class="contact__form-btn btn-special-animation"
+            >
+              Wyślij
+            </button>
+          </form>
         </div>
       </section>
     </main>
 
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__boxes">
+          <div class="footer__box">
+            <h3 class="footer__box-title">
+              <img src="img/bee-white.png" alt="Pasiek Dobry Miodek logo" />
+              Pasieka DM
+            </h3>
+            <p>
+              Prowadzimy usługi w zakresie sprzedaży i produkcji produktów
+              pszczelich nieprzetworzonych na terenia Wrocławia i okolic.
+              Wszystko pozyskujemy z własnej pasieki.
+            </p>
+            <div class="footer__box-social">
+              <a
+                href="https://www.facebook.com/DobryMiodek.pasieka"
+                class="footer__box-link"
+                ><i class="fa-brands fa-facebook-f"></i></a
+              ><a
+                href="https://www.instagram.com/dobrymiodek/"
+                class="footer__box-link"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer__box footer__box-desktop">
+            <h3 class="footer__box-title">Zadzwoń do nas</h3>
+            <ul class="footer__box-list">
+              <li class="footer__box-list-item">
+                <a href="tel:+48578207361">+48 578 207 361</a>
+              </li>
+              <li class="footer__box-list-item">
+                <a href="mailto:pasiekadobrymiodek@gmail"
+                  >pasiekadobrymiodek@gmail</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__box footer__box-desktop">
+            <h3 class="footer__box-title">Gdzie odebrać miód?</h3>
+            <ul class="footer__box-list">
+              <li class="footer__box-list-item">Maślice</li>
+              <li class="footer__box-list-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <a
+                  href="https://www.google.com/maps/place/Ma%C5%9Blice,+Wroc%C5%82aw,+Polska/@51.170279,16.941829,12z/data=!4m6!3m5!1s0x470feace8397cf1d:0x48c1572c9e906923!8m2!3d51.157561!4d16.9274743!16s%2Fg%2F12hq__v9_?hl=pl-PL&entry=ttu"
+                  >Łomżyńska 4, 54-101 Wrocław</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="footer__bottom-text">
+        &copy; <span class="foote_year"></span>Pasieka DobryMiodek
+      </p>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/slick.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -150,7 +150,7 @@ body {
     font-weight: 700;
   }
   &__heading {
-    font-family: "Tektur", cursive;
+    font-family: "Rammetto One", cursive;
     font-size: 4.5rem;
     font-weight: 300;
   }
@@ -189,6 +189,8 @@ body {
 
   &__title {
     margin-bottom: 0.5em;
+    font-weight: 300;
+    font-size: 3.2rem;
   }
 
   &__text {
@@ -211,8 +213,8 @@ body {
   overflow: hidden;
 
   &__title {
-    font-family: "Tektur", cursive;
-    font-size: 4rem;
+    font-family: "Rammetto One", cursive;
+    font-size: 2.5rem;
     padding: 0.5em 0.2em;
   }
   &__text {
@@ -264,7 +266,7 @@ body {
         position: absolute;
         top: 1.5em;
         left: 1.3em;
-        font-family: "Tektur", cursive;
+        font-family: "Rammetto One", cursive;
         font-size: 2rem;
         letter-spacing: 0.2em;
       }
@@ -299,9 +301,9 @@ body {
         position: absolute;
         left: 1.3em;
         top: 1.5em;
-        font-family: "Tektur", cursive;
+        font-family: "Rammetto One", cursive;
         letter-spacing: 0.2em;
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
 
       &-text {
@@ -357,18 +359,18 @@ body {
 
 //miody - oferta
 .offers {
-  position: relative;
+  // position: relative;
   // @include heroImgages("../img/sloikmiod-small.jpg");
-  overflow: hidden;
+  // overflow: hidden;
 
-  .section-heading {
-    // color: $pure-white;
-  }
+  // .section-heading {
+  //   // color: $pure-white;
+  // }
 
   &__option {
     margin: 1em 0;
-    box-shadow: 2px 2px 20px $light-white;
-    background-color: $pure-white;
+    box-shadow: 5px 5px 20px $light-white;
+    // background-color: $pure-white;
     overflow: hidden;
 
     &-img {
@@ -393,6 +395,179 @@ body {
       margin-bottom: 0.5em;
       font-size: 1.3rem;
     }
+  }
+}
+
+//reviews
+
+@media (max-width: 767px) {
+  .reviews.section-padding {
+    padding: 6em 0;
+  }
+}
+.reviews {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // height: 50vh;
+  @include heroImgages("../img/sloikmiod-small.jpg");
+  overflow: hidden;
+
+  .section-heading {
+    color: $pure-white;
+  }
+
+  &__box {
+    position: relative;
+    background-color: $pure-white;
+    margin: 2em;
+    padding: 2em;
+    // box-shadow: 2px 2px 20px $light-white;
+    height: auto;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(0.97);
+    }
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      box-shadow: 2px 2px 10px #b5b4b4;
+      border-radius: 50%;
+    }
+  }
+
+  &__box-google {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__box-quote {
+    margin-bottom: 1em;
+    font-size: 3rem;
+    color: $main-color;
+  }
+
+  &__box-text {
+    margin-bottom: 1em;
+    font-size: 1.6rem;
+  }
+
+  .white-block-left {
+    background-color: $light-white;
+  }
+}
+
+//contact
+.contact {
+  position: relative;
+  background-color: $light-white;
+
+  .white-block-left {
+    background-color: $dark;
+  }
+
+  .section-padding {
+    padding: 0 0;
+    padding-bottom: 3em;
+  }
+
+  &__form,
+  &__form-top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-label {
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  &__form-input {
+    @include contactForm;
+  }
+  &__form-textarea {
+    @include contactForm;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  &__form-btn {
+    align-self: flex-end;
+    padding: 1em;
+    width: 100%;
+    max-width: 50%;
+    color: $pure-white;
+    border: none;
+    background-color: $main-color;
+    cursor: pointer;
+
+    &::before {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+//footer
+.footer {
+  color: $pure-white;
+  background-color: $dark;
+
+  .wrapper {
+    padding: 6em 2em 2em;
+  }
+
+  &__box-desktop {
+    display: none;
+  }
+  &__box-title {
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__box-social {
+    margin: 2em 0 1em;
+  }
+
+  &__box-link {
+    color: $pure-white;
+    font-size: 3.6rem;
+    padding: 0 0.3em;
+    text-decoration: none;
+    transform: color 0.3s;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__bottom-text {
+    text-align: center;
+    padding: 2em;
   }
 }
 
@@ -433,8 +608,8 @@ body {
     padding: 30rem 2em;
 
     &__title {
-      font-family: "Tektur", cursive;
-      font-size: 6rem;
+      font-family: "Rammetto One", cursive;
+      font-size: 5rem;
     }
     &__text {
       font-size: 2.8rem;
@@ -527,8 +702,8 @@ body {
     padding: 30rem 2em;
 
     &__title {
-      font-family: "Tektur", cursive;
-      font-size: 9rem;
+      font-family: "Rammetto One", cursive;
+      font-size: 6.5rem;
     }
     &__text {
       font-size: 3.3rem;
@@ -547,12 +722,12 @@ body {
 
       &-img {
         &-title {
-          font-size: 2.8rem;
+          font-size: 2.4rem;
         }
       }
       &-info {
         &-title {
-          font-size: 2.8rem;
+          font-size: 2.4rem;
         }
       }
     }
@@ -564,6 +739,52 @@ body {
       }
       &-text {
         font-size: 1.6rem;
+      }
+    }
+  }
+
+  .footer {
+    &__boxes {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__box-desktop {
+      display: block;
+    }
+
+    &__box {
+      margin: 0 2em;
+      width: 30%;
+
+      &:first-child {
+        width: 40%;
+      }
+    }
+
+    &__box-title {
+      font-size: 2rem;
+      height: 50px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__box-list {
+      list-style: none;
+      text-decoration: none;
+    }
+
+    &__box-list-item {
+      margin-bottom: 1em;
+      a {
+        text-decoration: none;
+        color: $pure-white;
+
+        &:hover {
+          color: $main-color;
+        }
       }
     }
   }
@@ -611,7 +832,7 @@ body {
     background-image: $orange-gradient, url("../img/miod-rzepakowy.jpg");
 
     &__title {
-      font-size: 11rem;
+      font-size: 8rem;
     }
 
     &__text {
