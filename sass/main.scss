@@ -132,6 +132,12 @@ body {
   // animation-delay: .1s;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: $dark;
+}
+
 //header
 .header {
   position: relative;
@@ -148,6 +154,16 @@ body {
 
   span {
     font-weight: 700;
+  }
+
+  &__logo {
+    position: absolute;
+    left: -18px;
+    top: 18px;
+
+    img {
+      width: 50%;
+    }
   }
   &__heading {
     font-family: "Rammetto One", cursive;
@@ -536,17 +552,41 @@ body {
     padding: 6em 2em 2em;
   }
 
-  &__box-desktop {
-    display: none;
+  &__box {
+    text-align: center;
   }
+
+  &__box-desktop {
+    padding: 2em 0;
+    font-size: 1.8rem;
+  }
+
   &__box-title {
     margin-bottom: 1.5em;
-    font-size: 2rem;
-    text-transform: uppercase;
+  }
+
+  &__box-list {
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &__box-list-item {
+    margin-bottom: 1em;
+    a {
+      text-decoration: none;
+      color: $pure-white;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
   }
 
   &__box-social {
-    margin: 2em 0 1em;
+    margin: 1em 0 1em;
+    i {
+      font-size: 2.5rem;
+    }
   }
 
   &__box-link {
@@ -747,27 +787,24 @@ body {
     &__boxes {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     &__box-desktop {
       display: block;
     }
 
     &__box {
+      text-align: center;
       margin: 0 2em;
-      width: 30%;
-
-      &:first-child {
-        width: 40%;
-      }
     }
 
     &__box-title {
-      font-size: 2rem;
-      height: 50px;
+      margin-bottom: 2em;
+    }
 
+    &__box-logo {
       img {
-        width: 20px;
-        height: 20px;
+        width: 80%;
       }
     }
 

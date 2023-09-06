@@ -189,6 +189,12 @@ body {
   animation: navItemsAnimation 1s both;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: #2e2e2e;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -207,6 +213,14 @@ body {
 }
 .header span {
   font-weight: 700;
+}
+.header__logo {
+  position: absolute;
+  left: -18px;
+  top: 18px;
+}
+.header__logo img {
+  width: 50%;
 }
 .header__heading {
   font-family: "Rammetto One", cursive;
@@ -520,16 +534,35 @@ body {
 .footer .wrapper {
   padding: 6em 2em 2em;
 }
+.footer__box {
+  text-align: center;
+}
 .footer__box-desktop {
-  display: none;
+  padding: 2em 0;
+  font-size: 1.8rem;
 }
 .footer__box-title {
   margin-bottom: 1.5em;
-  font-size: 2rem;
-  text-transform: uppercase;
+}
+.footer__box-list {
+  list-style: none;
+  text-decoration: none;
+}
+.footer__box-list-item {
+  margin-bottom: 1em;
+}
+.footer__box-list-item a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__box-list-item a:hover {
+  color: #f8a52b;
 }
 .footer__box-social {
-  margin: 2em 0 1em;
+  margin: 1em 0 1em;
+}
+.footer__box-social i {
+  font-size: 2.5rem;
 }
 .footer__box-link {
   color: #fff;
@@ -675,24 +708,20 @@ body {
   .footer__boxes {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .footer__box-desktop {
     display: block;
   }
   .footer__box {
+    text-align: center;
     margin: 0 2em;
-    width: 30%;
-  }
-  .footer__box:first-child {
-    width: 40%;
   }
   .footer__box-title {
-    font-size: 2rem;
-    height: 50px;
+    margin-bottom: 2em;
   }
-  .footer__box-title img {
-    width: 20px;
-    height: 20px;
+  .footer__box-logo img {
+    width: 80%;
   }
   .footer__box-list {
     list-style: none;

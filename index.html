@@ -39,6 +39,9 @@
     </button>
 
     <header class="header section">
+      <div class="header__logo">
+        <img src="img/czarne-mini.png" alt="" />
+      </div>
       <h1 class="header__heading">
         <span>Pasieka</span> <br />
         Dobry Miodek
@@ -93,9 +96,9 @@
             <div class="aboutus__box-text">
               <h3 class="aboutus__title">Zaufaj naturze</h3>
               <p class="aboutus__text">
-                Miód tworzony z miłością do pszczół, więc posiadamy własną
-                pasiekę. Dzięki temu otrzymujemy miód bogaty w proteiny i
-                najlepszy niemodyfikowany smak miodu.
+                Prowadzimy usługi w zakresie sprzedaży i produkcji produktów
+                pszczelich nieprzetworzonych na terenia Wrocławia i okolic.
+                Wszystko pozyskujemy z własnej pasieki.
               </p>
             </div>
           </div>
@@ -212,7 +215,7 @@
         </div>
       </section>
 
-      <section class="offers section-padding section">
+      <section class="offers section-padding section white-section">
         <!-- <div class="white-block white-block-right"></div>
         <div class="white-block white-block-left"></div> -->
         <h2 class="section-heading">Wybierz miód dla siebie</h2>
@@ -320,10 +323,7 @@
         </div>
       </section>
 
-      <section
-        class="reviews section section-padding white-section"
-        id="opinie"
-      >
+      <section class="reviews section section-padding" id="opinie">
         <div class="white-block white-block-left"></div>
         <div class="white-block white-block-right"></div>
         <h2 class="section-heading">Opinie</h2>
@@ -453,19 +453,14 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer section">
       <div class="wrapper">
         <div class="footer__boxes">
           <div class="footer__box">
-            <h3 class="footer__box-title">
-              <img src="img/bee-white.png" alt="Pasiek Dobry Miodek logo" />
-              Pasieka DM
-            </h3>
-            <p>
-              Prowadzimy usługi w zakresie sprzedaży i produkcji produktów
-              pszczelich nieprzetworzonych na terenia Wrocławia i okolic.
-              Wszystko pozyskujemy z własnej pasieki.
-            </p>
+            <div class="footer__box-logo">
+              <img src="img/logo-biale2.png" alt="Pasiek Dobry Miodek logo" />
+            </div>
+
             <div class="footer__box-social">
               <a
                 href="https://www.facebook.com/DobryMiodek.pasieka"
@@ -497,10 +492,10 @@
             <ul class="footer__box-list">
               <li class="footer__box-list-item">Maślice</li>
               <li class="footer__box-list-item">
-                <i class="fa-solid fa-location-dot"></i>
                 <a
                   href="https://www.google.com/maps/place/Ma%C5%9Blice,+Wroc%C5%82aw,+Polska/@51.170279,16.941829,12z/data=!4m6!3m5!1s0x470feace8397cf1d:0x48c1572c9e906923!8m2!3d51.157561!4d16.9274743!16s%2Fg%2F12hq__v9_?hl=pl-PL&entry=ttu"
-                  >Łomżyńska 4, 54-101 Wrocław</a
+                  ><i class="fa-solid fa-location-dot"></i> Łomżyńska 4, 54-101
+                  Wrocław</a
                 >
               </li>
             </ul>
@@ -509,7 +504,7 @@
       </div>
       <hr />
       <p class="footer__bottom-text">
-        &copy; <span class="foote_year"></span>Pasieka DobryMiodek
+        &copy; <span class="footer__year"></span> Pasieka DobryMiodek
       </p>
     </footer>
 
