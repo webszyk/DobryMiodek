@@ -1,0 +1,794 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.white-block {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+  background-color: #fff;
+}
+.white-block-left {
+  bottom: -1px;
+  left: -50px;
+  transform: skew(55deg);
+}
+.white-block-right {
+  top: -1px;
+  right: -50px;
+  transform: skew(55deg);
+}
+
+.btn-special-animation {
+  position: relative;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  z-index: 0;
+  color: #2e2e2e;
+  transition: 0.5s;
+}
+.btn-special-animation::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.btn-special-animation:hover::before {
+  transform: scale(1);
+  transform-origin: left;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f8a52b;
+  letter-spacing: 2px;
+}
+
+.section-padding {
+  padding: 6em 2em;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 3rem;
+  }
+  .section-padding {
+    padding: 8em 2em;
+  }
+}
+@media (min-width: 992px) {
+  .section-heading {
+    font-size: 4.8rem;
+  }
+  .section-padding {
+    padding: 10em 2em;
+  }
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #2e2e2e;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: 0.5s;
+  background-image: linear-gradient(45deg, rgb(209, 69, 69), rgb(255, 208, 69));
+  z-index: 100;
+}
+.nav--active {
+  transform: translateX(0);
+}
+.nav__item {
+  position: relative;
+  margin: 0.5em 0;
+  text-decoration: none;
+  font-size: 3.4rem;
+  padding: 0.5em 2em;
+  display: block;
+  color: #fff;
+}
+.nav__item::before {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  transition: transform 0.6s;
+  content: "";
+}
+.nav__item:hover::before {
+  content: url(../img/bee-white.png);
+}
+
+.burger-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  right: 0;
+  height: 3px;
+  content: "";
+  background-color: #fff;
+  transition: width 0.5s;
+}
+.burger-btn__bars {
+  width: 100%;
+}
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30%;
+  transition-delay: 0.1s;
+}
+
+@keyframes navItemsAnimation {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-items-animation {
+  animation: navItemsAnimation 1s both;
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: #2e2e2e;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 75vh;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/header-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-attachment: scroll;
+}
+.header span {
+  font-weight: 700;
+}
+.header__logo {
+  position: absolute;
+  left: -18px;
+  top: 18px;
+}
+.header__logo img {
+  width: 50%;
+}
+.header__heading {
+  font-family: "Rammetto One", cursive;
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+.header__text {
+  font-size: 1.4rem;
+}
+.header__btn {
+  background: #fff;
+  margin-top: 2em;
+  padding: 0.8em 1.6em;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.header__btn::before {
+  background-color: #eee;
+}
+
+.aboutus__box {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+.aboutus__img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.aboutus__title {
+  margin-bottom: 0.5em;
+  font-weight: 300;
+  font-size: 3.2rem;
+}
+.aboutus__text {
+  font-size: 1.4rem;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 10em -2em;
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/miod-rzepakowy-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  height: 70vh;
+  overflow: hidden;
+}
+.hero-img__title {
+  font-family: "Rammetto One", cursive;
+  font-size: 2.5rem;
+  padding: 0.5em 0.2em;
+}
+.hero-img__text {
+  padding: 0.5em 1em;
+  font-size: 2rem;
+}
+
+.faq__card {
+  position: relative;
+  margin: 1em 0;
+  height: 600px;
+  color: #fff;
+  text-align: center;
+  perspective: 1000px;
+}
+.faq__card:hover .faq__card-img {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+.faq__card:hover .faq__card-info {
+  transform: rotateY(0);
+  opacity: 1;
+}
+.faq__card-img {
+  padding: 2em;
+  height: 100%;
+  background-size: cover;
+  transition: transform 1.5s, opacity 1.5s;
+}
+.faq__card-img--first {
+  background-image: radial-gradient(circle at top right, rgba(120, 140, 182, 0.75) 0%, rgba(253, 184, 19, 0.75) 100%), url("../img/sloik-miodu.jpg");
+}
+.faq__card-img--second {
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/rozlewanie-miodu.jpg");
+}
+.faq__card-img--third {
+  background-image: linear-gradient(315deg, rgba(251, 176, 52, 0.75) 0%, rgba(255, 221, 0, 0.75) 74%), url("../img/pszczoly.jpg");
+}
+.faq__card-img-title {
+  position: absolute;
+  top: 1.5em;
+  left: 1.3em;
+  font-family: "Rammetto One", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+}
+.faq__card-img-info {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.2em;
+  font-size: 2rem;
+}
+.faq__card-img-info i {
+  margin-right: 0.3em;
+}
+.faq__card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%);
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 1.5s opacity 1.5s;
+}
+.faq__card-info-title {
+  position: absolute;
+  left: 1.3em;
+  top: 1.5em;
+  font-family: "Rammetto One", cursive;
+  letter-spacing: 0.2em;
+  font-size: 1.6rem;
+}
+.faq__card-info-text {
+  padding: 1em;
+}
+.faq__card-info-list {
+  margin: 0 auto;
+  list-style: none;
+}
+.faq__card-info-list-item {
+  padding: 1em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+  margin: 0 auto;
+}
+.faq__card-info-list-item a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.faq__card-info-list-item a:hover {
+  color: #2e2e2e;
+}
+.faq__card-info-list-item:last-child {
+  border-bottom: none;
+}
+
+.offers__option {
+  margin: 1em 0;
+  box-shadow: 5px 5px 20px #eee;
+  overflow: hidden;
+}
+.offers__option-img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+.offers__option-img:hover {
+  transform: scale(1.05);
+}
+.offers__option-info {
+  padding: 2em;
+  background-color: #fff;
+  z-index: 10;
+}
+.offers__option-heading {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.offers__option-text {
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 767px) {
+  .reviews.section-padding {
+    padding: 6em 0;
+  }
+}
+.reviews {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/sloikmiod-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.reviews .section-heading {
+  color: #fff;
+}
+.reviews__box {
+  position: relative;
+  background-color: #fff;
+  margin: 2em;
+  padding: 2em;
+  height: auto;
+  transition: transform 0.3s;
+}
+.reviews__box:hover {
+  transform: scale(0.97);
+}
+.reviews__box-img {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+.reviews__box-img img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 2px 2px 10px #b5b4b4;
+  border-radius: 50%;
+}
+.reviews__box-google {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.reviews__box-google img {
+  width: 25px;
+  height: 25px;
+}
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: #f8a52b;
+}
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.6rem;
+}
+.reviews .white-block-left {
+  background-color: #eee;
+}
+
+.contact {
+  position: relative;
+  background-color: #eee;
+}
+.contact .white-block-left {
+  background-color: #2e2e2e;
+}
+.contact .section-padding {
+  padding: 0 0;
+  padding-bottom: 3em;
+}
+.contact__form, .contact__form-top {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form-label {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.contact__form-input {
+  height: 50px;
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  font-size: 1.6rem;
+  border: none;
+}
+.contact__form-textarea {
+  height: 50px;
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  font-size: 1.6rem;
+  border: none;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 200px;
+}
+.contact__form-btn {
+  align-self: flex-end;
+  padding: 1em;
+  width: 100%;
+  max-width: 50%;
+  color: #fff;
+  border: none;
+  background-color: #f8a52b;
+  cursor: pointer;
+}
+.contact__form-btn::before {
+  background-color: #d98f19;
+}
+
+.footer {
+  color: #fff;
+  background-color: #2e2e2e;
+}
+.footer .wrapper {
+  padding: 6em 2em 2em;
+}
+.footer__box {
+  text-align: center;
+}
+.footer__box-desktop {
+  padding: 2em 0;
+  font-size: 1.8rem;
+}
+.footer__box-title {
+  margin-bottom: 1.5em;
+}
+.footer__box-list {
+  list-style: none;
+  text-decoration: none;
+}
+.footer__box-list-item {
+  margin-bottom: 1em;
+}
+.footer__box-list-item a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__box-list-item a:hover {
+  color: #f8a52b;
+}
+.footer__box-social {
+  margin: 1em 0 1em;
+}
+.footer__box-social i {
+  font-size: 2.5rem;
+}
+.footer__box-link {
+  color: #fff;
+  font-size: 3.6rem;
+  padding: 0 0.3em;
+  text-decoration: none;
+  transform: color 0.3s;
+}
+.footer__box-link:first-child {
+  padding-left: 0;
+}
+.footer__box-link:hover {
+  color: #f8a52b;
+}
+.footer__bottom-text {
+  text-align: center;
+  padding: 2em;
+}
+
+@media (min-width: 576px) {
+  .aboutus__box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .aboutus__box-text {
+    width: 55%;
+  }
+  .aboutus__box-text--right {
+    text-align: right;
+  }
+  .aboutus__box-img {
+    width: 40%;
+  }
+  .aboutus__box-img--right {
+    order: 1;
+  }
+  .aboutus__img {
+    margin-bottom: 0;
+    max-height: 300px;
+  }
+  .hero-img {
+    padding: 30rem 2em;
+  }
+  .hero-img__title {
+    font-family: "Rammetto One", cursive;
+    font-size: 5rem;
+  }
+  .hero-img__text {
+    font-size: 2.8rem;
+    padding: 0 1em;
+    width: 90%;
+  }
+  .faq__card-img-title {
+    font-size: 3rem;
+  }
+  .faq__card-img-info {
+    font-size: 2.5rem;
+  }
+  .faq__card-info-title {
+    font-size: 3rem;
+  }
+  .faq__card-info-text {
+    font-size: 2rem;
+  }
+  .faq__card-info-list {
+    font-size: 2rem;
+    width: 90%;
+    margin-top: 2em;
+  }
+  .faq__card-info-list-item {
+    font-size: 1.8rem;
+  }
+  .offers__option {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-img {
+    width: 50%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .offers__option-img--right {
+    order: 1;
+  }
+  .offers__option-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+  }
+}
+@media (min-width: 768px) {
+  .white-block {
+    height: 45px;
+    width: 48%;
+  }
+  .header__heading {
+    font-size: 6.6rem;
+  }
+  .header__text {
+    font-size: 2.2rem;
+  }
+  .header__btn {
+    font-size: 1.8rem;
+  }
+  .aboutus__text {
+    font-size: 1.8rem;
+  }
+  .hero-img {
+    padding: 30rem 2em;
+  }
+  .hero-img__title {
+    font-family: "Rammetto One", cursive;
+    font-size: 6.5rem;
+  }
+  .hero-img__text {
+    font-size: 3.3rem;
+    padding: 0 1em;
+  }
+  .faq__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .faq__card {
+    margin: 1em;
+    width: 45%;
+  }
+  .faq__card-img-title {
+    font-size: 2.4rem;
+  }
+  .faq__card-info-title {
+    font-size: 2.4rem;
+  }
+  .offers__option-heading {
+    font-size: 3.2rem;
+  }
+  .offers__option-text {
+    font-size: 1.6rem;
+  }
+  .footer__boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__box-desktop {
+    display: block;
+  }
+  .footer__box {
+    text-align: center;
+    margin: 0 2em;
+  }
+  .footer__box-title {
+    margin-bottom: 2em;
+  }
+  .footer__box-logo img {
+    width: 80%;
+  }
+  .footer__box-list {
+    list-style: none;
+    text-decoration: none;
+  }
+  .footer__box-list-item {
+    margin-bottom: 1em;
+  }
+  .footer__box-list-item a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer__box-list-item a:hover {
+    color: #f8a52b;
+  }
+}
+@media (min-width: 992px) {
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+  .header {
+    background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/header-big.jpg");
+  }
+  .header__heading {
+    font-size: 10rem;
+  }
+  .nav__item {
+    font-size: 6rem;
+  }
+  .nav__item::before {
+    top: 30px;
+    left: 20px;
+  }
+  .aboutus__box {
+    margin: 5em 0;
+  }
+  .aboutus__title {
+    font-size: 3rem;
+  }
+  .aboutus__text {
+    font-size: 1.8rem;
+  }
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: linear-gradient(316deg, rgba(209, 69, 69, 0.75) 10%, rgba(255, 153, 51, 0.75) 74%), url("../img/miod-rzepakowy.jpg");
+  }
+  .hero-img__title {
+    font-size: 8rem;
+  }
+  .hero-img__text {
+    font-size: 4rem;
+    width: 80%;
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .section-padding {
+    padding: 4em;
+  }
+}
+@media (min-width: 1100px) {
+  .faq__card {
+    width: 30%;
+  }
+  .faq__card-img {
+    background-position: center;
+  }
+}/*# sourceMappingURL=main.css.map */
