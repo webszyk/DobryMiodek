@@ -1,7 +1,7 @@
 # Projekt DobryMiodek 🍯
 Live demo: [Pasieka Dobry Miodek](https://karlasz.github.io/DobryMiodek/index)
 
-DobryMiodek is a fictional website for a honey shop. It features a clean and friendly design focused on promoting natural products, particularly different varieties of honey. This project demonstrates a single-page product showcase layout with engaging visuals and responsive design.
+DobryMiodek is a layout website for a honey shoper. It features a clean and friendly design focused on promoting natural products, particularly different varieties of honey. This project demonstrates a single-page product showcase layout with engaging visuals and responsive design.
 
 🌼 Features
 Scrollable, one-page layout
