@@ -555,6 +555,18 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
+a {
+  color: #f8a52b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .footer__box-list-item a:hover {
   color: #f8a52b;
 }
