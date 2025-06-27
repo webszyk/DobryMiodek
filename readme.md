@@ -28,15 +28,9 @@ To use or preview the website locally:
 
 Clone the repository:
 
-bash
-Copy
-Edit
 git clone https://github.com/KarlaSz/DobryMiodek.git
 Go to the project directory:
 
-bash
-Copy
-Edit
 cd DobryMiodek
 Open index.html in your browser.
 
