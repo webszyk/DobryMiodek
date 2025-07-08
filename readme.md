@@ -1,6 +1,7 @@
 # Projekt DobryMiodek 🍯
 Projekt: [Kliknij Pasieka Dobry Miodek](https://karlasz.github.io/DobryMiodek/index)
-![mockup-strona-google](https://github.com/user-attachments/assets/970f5224-5692-4627-9fc1-7f82de3722cb)
+
+![mockup-strona-google2](https://github.com/user-attachments/assets/48e4feb4-107b-467d-bbf8-0cd7bd0a4cf6)
 
 DobryMiodek to layout strony internetowej dla sklepu z miodem. Charakteryzuje się czystym i przyjaznym designem, skoncentrowanym na promowaniu naturalnych produktów, a w szczególności różnorodnych odmian miodu. Projekt prezentuje jednostronicowy układ z atrakcyjną szatą graficzną i responsywnym dopasowaniem do urządzeń mobilnych.
 
