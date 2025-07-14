@@ -1,5 +1,5 @@
 # Projekt DobryMiodek 🍯
-Projekt: [Kliknij Pasieka Dobry Miodek](https://karlasz.github.io/DobryMiodek/index)
+Projekt: [Kliknij Pasieka Dobry Miodek](https://webszyk.github.io/DobryMiodek/index)
 
 ![mockup-strona-google2](https://github.com/user-attachments/assets/48e4feb4-107b-467d-bbf8-0cd7bd0a4cf6)
 
